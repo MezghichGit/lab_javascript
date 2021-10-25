@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+
+<script language="javascript" type="text/javascript">
+function choix()
+{
+var reponse="";
+if(document.langages.lang[0].checked)
+//alert("HTML");
+reponse =reponse + "HTML";
+if(document.langages.lang[1].checked)
+//alert("CSS");
+reponse =reponse + " CSS";
+if(document.langages.lang[2].checked)
+reponse =reponse + " Javascript";
+alert(reponse);
+}
+</script>
+</head>
+<body>
+<h3 align="center">Je maitrise les langages:</h3>
+
+<form name="langages">
+<input type="checkbox" name="lang" value="html"/> HTML 
+<input type="checkbox" name="lang" value="css"/>CSS
+<input type="checkbox" name="lang" value="js"/>Javascript
+<button onclick="choix()">Mon choix</button>
+</form>
+
+
+</body>
+</html>
