@@ -41,6 +41,7 @@ window.document.write("<h2>salut chers étudiants</h2>");
 var x = "12.5F";
 
 // Les méthodes de conversion de String vers des nombres
+/*
 window.document.write(parseFloat(x) + "<br/>");  //12.5
 window.document.write(parseInt(x)+ "<br/>");  //12
 window.document.write(Number(x)); 
@@ -50,7 +51,32 @@ var moy = 18;
 window.document.write("Type de moy : "+typeof(moy));
 window.document.write("<br/>"); 
 var variable = String(moy);
-window.document.write("Type de variable : "+typeof(variable));
+window.document.write("Type de variable : "+typeof(variable));*/
+
+
+
+// EXERCICE 2
+var nombre1 = Number(prompt("Entrez le nombre 1"));
+var nombre2 = Number(prompt("Entrez le nombre 2"));
+var somme = nombre1 + nombre2;alert("La somme est " + somme);
+
+// EXERCICE 3
+var x = Number(prompt("Entrez le nombre x"));
+var y = Number(prompt("Entrez le nombre y"));
+if (x > 5) 
+x -= 5;
+else  x += 5;
+
+if (y > 10)    
+y -= 10;else y += 10;
+somme = x + y;
+alert("Leur somme est " + somme);
+// EXERCICE 4
+for (var i = 1; i <= 1000; i++)   
+if (i % 23 == 0)        
+console.log(i);
+
+
 </script>
 </body>
 </html>
