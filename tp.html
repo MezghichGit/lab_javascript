@@ -88,10 +88,25 @@ names[2]="Mohamed";
 for(var i=0; i<names.length;i++)
 alert(names[i]);*/
 
+function search(sentence, word)
+{
+var pos = sentence.indexOf(word,0);
+if(pos!=-1) alert("votre mot de trouve à la position : "+pos);
+else alert("votre mot est introuvable");
+}
+
+
 function info()
 {
 alert("vous avez cliquer sur un bouton");
 }
+
+//Exo recherche
+var phrase = prompt("Donner une phrase");
+var mot = prompt("Donner un mot");
+search(phrase,mot);
+
+
 
 </script>
 
