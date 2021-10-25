@@ -1,0 +1,22 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+
+<script language="javascript" type="text/javascript">
+function  verif()
+{
+var nom = document.getElementById("n");  // la fonction  prédéfinie getElementById permet de récupérer un objet du DOM par son id(doit être unique)
+alert("vous avez taper : "+nom.value);
+}
+</script>
+<h3 align="center">Formulaire d'inscription</h3>
+
+<form name="inscrit">
+Votre nom : <input type="text" name="nom" id="n"/>
+
+<button onclick="verif()">Ajouter</button>
+</form>
+
+
+</body>
+</html>
