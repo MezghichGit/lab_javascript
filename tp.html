@@ -55,7 +55,9 @@ window.document.write("Type de variable : "+typeof(variable));*/
 
 
 
+
 // EXERCICE 2
+/*
 var nombre1 = Number(prompt("Entrez le nombre 1"));
 var nombre2 = Number(prompt("Entrez le nombre 2"));
 var somme = nombre1 + nombre2;alert("La somme est " + somme);
@@ -70,14 +72,30 @@ else  x += 5;
 if (y > 10)    
 y -= 10;else y += 10;
 somme = x + y;
-alert("Leur somme est " + somme);
+alert("Leur somme est " + somme);*/
 // EXERCICE 4
-for (var i = 1; i <= 1000; i++)   
+/*for (var i = 1; i <= 1000; i++)   
 if (i % 23 == 0)        
-console.log(i);
+window.document.write(i+"\t");  // \t : tabulation
+console.log(i);*/
 
+var names = new Array(3);  // Array est un objet prédéfinie en Javascript
+/*
+names[0]="Josef";
+names[1]="Amine";
+names[2]="Mohamed";
+
+for(var i=0; i<names.length;i++)
+alert(names[i]);*/
+
+function info()
+{
+alert("vous avez cliquer sur un bouton");
+}
 
 </script>
+
+<button onclick="info()">Cliquer</button>
 </body>
 </html>
 
