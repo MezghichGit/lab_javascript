@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulaire de demande de crédit</title>
+    <script>
+
+
+
+
+        function VerifDemande() {
+
+            var test = true;
+            var nom = document.credit.nom.value;
+            var prenom = document.credit.prenom.value;
+            var telephone = document.credit.telephone.value;
+            var indduree = document.credit.duree.selectedIndex;
+            var monChoixDuree = document.credit.duree.options[indduree].value;
+            var autres = document.credit.autres.value;
+
+            //Test champ Nom/Prenom/Telephone
+
+            
+            if (nom.length == 0) {
+                test = false;
+                alert("Champs nom vide");
+            }
+            if (prenom.length == 0 ) {
+                test = false;
+                alert("Champs prenom vide");
+            }
+            if (telephone.length == 0) {
+                test = false;
+                alert("Champs telephone vide");
+            }
+
+     
+
+
+                if (Number(telephone)) {
+                    if (telephone.length != 10) {
+                        test = false;
+                        alert("erreur...le numéro de téléphone doit comporter 10 chiffres!!");
+                    }
+
+                }
+                else {
+                    test = false;
+                    alert("erreur...le numéro de téléphone doit être au format numérique!!");
+                }
+
+
+
+                for (var i = 0; i < document.credit.salaire.length; i++) {
+                    if (document.credit.salaire[i].checked)
+                        var salaire = document.credit.salaire[i].value;
+                }
+
+                var motif="";
+                for (var i = 0; i < document.credit.motif.length; i++) {
+                    if (document.credit.motif[i].checked){
+                      motif = document.credit.motif[i].value;
+                      if(motif=="autres")
+                        {
+                            if(autres.length==0){
+                            test = false;
+                            alert("Le champs Autre doit être non vide!");
+                            }
+
+                        }
+                }
+               }
+                
+               if(test == true)
+                alert("Nom : " + nom + " / Prenom : " + prenom + " / Telephone : " + telephone
+                    + "/ Votre salaire de base est : " + salaire
+                    + "/ Le motif de votre crédit est : " + motif
+                    + "/ Durée de votre remboursement : " + monChoixDuree
+                    + "/ Autres : " + autres);
+
+
+
+            
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1 align="center">Formulaire de demande de crédit</h1>
+
+    <!-- Exercice Credit -->
+
+    <form name="credit">
+        <div align="center">
+            <fieldset style="width: 10%;">
+                <legend>Demande de crédit:</legend>
+                <table align="left">
+                    <tr>
+                        <td>Nom</td>
+                        <td><input type="text" name="nom" placeholder="votre nom?" /></td>
+                    </tr>
+                    <tr>
+                        <td>Prénom</td>
+                        <td><input type="text" name="prenom" placeholder="votre prénom?" /></td>
+                    </tr>
+                    <tr>
+                        <td>Téléphone</td>
+                        <td><input type="text" name="telephone" placeholder="votre mobile?" /></td>
+                    </tr>
+                    <tr>
+                        <td>Salaire :</td>
+                        <td><input type="radio" name="salaire" value="inférieur à 2000" checked /></td>
+                        <td>inférieur à 2000</td>
+                        <td><input type="radio" name="salaire" value="supérieur à 2000" /></td>
+                        <td>supérieur à 2000</td>
+                    </tr>
+                    <tr>
+                        <td>Motifs crédit :</td>
+                        <td><input type="checkbox" name="motif" value="voiture" checked /></td>
+                        <td>Voiture</td>
+                        <td><input type="checkbox" name="motif" value="immobilier" /></td>
+                        <td>Immobilier</td>
+                        <td><input type="checkbox" name="motif" value="autres" /></td>
+                        <td>Autres</td>
+                    </tr>
+                    <tr>
+                        <td>Durée de remboursement:</td>
+                        <td> <select name="duree">
+                                <option value="sur 3 ans">sur 3 ans</option>
+                                <option value="sur 5 ans">sur 5 ans</option>
+                                <option value="sur 7 ans">sur 7 ans</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Si Autres:</td>
+                        <td><textarea name="autres"></textarea>
+                        </td>
+                    </tr>
+                    <table align="right">
+                        <tr>
+                            <td><input type="button" value="Soumettre" onclick="VerifDemande()" /></td>
+                        </tr>
+                    </table>
+                </table>
+            </fieldset>
+        </div>
+    </form>
+
+</body>
+
+</html>

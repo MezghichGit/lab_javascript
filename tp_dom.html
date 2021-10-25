@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>Le DOM HTML</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <h1 id="gros_titre">Le DOM</h1>
+    <p id="para">Notre ecole <a href="https://web1.ip-formation.com/">ici</a></p>
+
+    <h1 align="center">Questionnaire web</h1>
+    <h3>HTML est interprété coté client? Vrai ou Faux?</h3>
+    <h5 hidden>Vrai</h5> 
+    <button>Réponse</button> 
+
+    <h3>PHP est orienté objet oui ou non?</h3> 
+    <h5 hidden>Vrai</h5> 
+    <button>Réponse</button>
+
+    <h3>Angular est un framework PHP. Vrai ou Faux?</h3> 
+    <h5 hidden>Faux</h5> 
+    <button>Réponse</button>
+
+
+
+    <script>
+     function validation(){
+        document.getElementById("para").innerHTML="<h1>Cours JS</h1>";
+     }
+        /*var element = document.getElementById("para").innerText; // resulat avec interprétation des balises html
+        var elementhtml = document.getElementById("para").innerHTML; // resulat sans interprétation des balises html
+        alert(element);
+        alert(elementhtml);*/
+    </script>
+    <br/><br/><br/>
+    <button onclick="validation()">Cliquer</button>
+</body>
+
+</html>
