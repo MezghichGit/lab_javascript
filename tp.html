@@ -19,14 +19,13 @@ alert("Vous avez "+age);
 //var nom = prompt("Taper votre nom","");
 //alert("Vous êtes :"+nom);
 
+// correction exo 
+/*
 var moy = prompt("Donner votre moyenne");
 
 if((Number(moy))>=10) alert("Passe");
 else alert("Redouble");
-
-
-
-
+*/
 
 </script>
 
@@ -35,5 +34,34 @@ else alert("Redouble");
 
 <body>
 <h1 align="center">Hello Javascript</h1>
+
+<script>
+window.document.write("<h2>salut chers étudiants</h2>");
+
+var x = "12.5F";
+
+// Les méthodes de conversion de String vers des nombres
+window.document.write(parseFloat(x) + "<br/>");  //12.5
+window.document.write(parseInt(x)+ "<br/>");  //12
+window.document.write(Number(x)); 
+// La méthode de conversion d'un Nombre vers un String
+window.document.write("<br/>"); 
+var moy = 18;
+window.document.write("Type de moy : "+typeof(moy));
+window.document.write("<br/>"); 
+var variable = String(moy);
+window.document.write("Type de variable : "+typeof(variable));
+</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
