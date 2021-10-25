@@ -7,16 +7,24 @@ function calcul()
 {
 	var monscore=0;
 	var compteur=0;
+	var nbCases=document.jeu.case.length;
 	
-	for(var i=0;i<document.jeu.case.length;i++)
+	// verification sur le nombre de case cochées
+	for(var i=0;i<nbCases;i++)
 	{
 		if(document.jeu.case[i].checked){
-		  compteur++;
-		  monscore=monscore + Number(document.jeu.case[i].value);
+		  compteur++; 
 		}
 	}
+	// calcul de score
 	if(compteur==3)
 	{
+		for(var i=0;i<nbCases;i++)
+		{
+			if(document.jeu.case[i].checked){
+			  monscore=monscore + Number(document.jeu.case[i].value);
+			}
+		}
 	   document.jeu.score.value = monscore;
 	   if(monscore>=15) alert("Vous êtes un expert");
 	   else alert("Vous êtes un débutant");
