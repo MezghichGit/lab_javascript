@@ -11,7 +11,9 @@ function  verif()
 
 // deuxième méthode(DOM)
 var nom = document.inscrit.nom.value;
-alert("vous avez taper : "+nom);
+if(nom.length<5) alert("Nom très court");
+else alert("Nom Valide");
+//alert("vous avez taper : "+nom);
 }
 </script>
 </head>
