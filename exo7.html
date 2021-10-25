@@ -27,10 +27,16 @@ function calcul()
 		}
 	   document.jeu.score.value = monscore;
 	   if(monscore>=15) alert("Vous êtes un expert");
-	   else alert("Vous êtes un débutant");
+	   else {
+	   alert("Vous êtes un débutant");
+	   
+	   }
 	}
 	else
+	{
 	alert("Vous devez choisir exactement 3 cases");
+	document.jeu.score.value = "";
+	}
 }
 </script>
 </head>
